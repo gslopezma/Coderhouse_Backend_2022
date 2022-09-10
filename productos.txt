@@ -1,0 +1,20 @@
+[
+  {
+    "titulo": "Jamon Cocido",
+    "precio": 100,
+    "thumbnail": "https://maricre.com.ar/wp-content/uploads/2020/07/149.jpg",
+    "id": 1
+  },
+  {
+    "titulo": "Queso Gorgonzola",
+    "precio": 150,
+    "thumbnail": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRYT-PQ7236-zuG69Ofekk6lubr3ExAwwfaQix71-Ijlsv01HOmYS4voyW1U4dcy2HdIc4&usqp=CAU",
+    "id": 2
+  },
+  {
+    "titulo": "Leberwurst",
+    "precio": 50,
+    "thumbnail": "https://hiperlibertad.vteximg.com.br/arquivos/ids/172738-1000-1000/Leberwurst-Paladini-Finas-Hiervas-X-200-Grs-1-13172.jpg?v=637472053031800000",
+    "id": 3
+  }
+]
