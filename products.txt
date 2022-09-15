@@ -1,0 +1,1 @@
+[{"nombre":"iPhone","precio":"3000","stock":"10","id":"1"}{"nombre":"Monitor","precio":"2000","stock":"50","id":"2"},{"nombre":"Heladera","precio":"4000","stock":"20","id":"3"}]
