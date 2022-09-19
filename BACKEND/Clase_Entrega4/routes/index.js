@@ -29,10 +29,12 @@ router.get('/:id', async (req, res) => {
     const { id } = req.params
     try {
         await readProductFile()
-        const idObj = productsArray.find(prod => {
-            return prod.id = id
-        })
-        res.send(idObj)
+        const idObj = productsArray.find((producto) => producto.id == id)
+        if (idObj == null) {
+            res.send({ error: `No existe un producto cuyo id sea ${id}` })
+        } else {
+            res.send(idObj)
+        }
     } catch (error) {
         res.status(400).json(error)
     }
@@ -58,8 +60,8 @@ router.put('/:id', dataValidation, async (req, res) => {
     try {
         await readProductFile()
         const prods = productsArray.find((producto) => producto.id == id)
-        if (!prods) {
-            res.send({ error: "El producto no existe" })
+        if (prods == null) {
+            res.send({ error: `No existe un producto cuyo id sea ${id}` })
         } else {
             console.log(prods)
             prods.nombre = nombre
@@ -77,9 +79,11 @@ router.delete('/:id', async (req, res) => {
     const { id } = req.params
     try {
         await readProductFile()
-        const filter = productsArray.filter(num => num.id !== id)
+        console.log(1)
+        const filter = productsArray.filter(num => Number(num.id) !== Number(id))
+        console.log(1)
         await fs.promises.writeFile('products.txt', JSON.stringify(filter))
-        res.status(200).json({ mensaje: 'Producto eliminado con exito', productsArray })
+        res.status(200).json({ mensaje: 'Producto eliminado con exito', filter })
     } catch (error) {
         res.status(400).json(error)
     }
