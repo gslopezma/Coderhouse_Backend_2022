@@ -1,0 +1,25 @@
+<div>
+  <% if (productsArray.length===0) { %>
+    <h1>No se encontraron productos</h1>
+    <div>
+      <form action="/api/productos" method="get">
+          <input type="submit" value= "Ingresar productos">
+      </form>
+  </div>
+    <% } else { %>
+    <table>
+      <tr>
+        <th>Nombre</th>
+        <th>Precio</th>
+        <th>Foto</th>
+      </tr>
+      <% productsArray.forEach(prod=>{ %>
+      <tr>
+        <td><%=productsArray.nombre%></td>
+        <td><%=productsArray.precio%></td>
+        <td><img width="300" src="<%= productsArray.foto %>"/></td>
+      </tr>
+      <% }) %>
+    </table>
+    <% } %>
+  </div>

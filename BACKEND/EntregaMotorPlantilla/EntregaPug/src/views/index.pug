@@ -1,0 +1,34 @@
+doctype html
+head
+  meta(charset='UTF-8')
+  meta(http-equiv='X-UA-Compatible' content='IE=edge')
+  meta(name='viewport' content='width=device-width, initial-scale=1.0')
+  title PRODUCTOS
+h2
+  | Ingrese
+  br
+  | Producto
+section
+  form(action='/api/productos' method='POST')
+    div
+      b
+        label(style='color:rgb(39, 3, 241)' for='name')  Nombre:  &nbsp; 
+      input(type='text' name='nombre' required='')
+    div
+      b
+        label(style='color:rgb(39, 3, 241)' for='precio') Precio: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      b
+        input(type='number' name='precio' required='')
+    div
+      b
+        label(style='color:rgb(39, 3, 241)' for='foto') Foto: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      b
+        input(type='url' name='foto' required='')
+    br
+    div
+      input(type='submit' value='Enviar')
+  br
+section
+  form(action='/api/productos' method='GET')
+    div
+      input(type='submit' value='Ver Productos')

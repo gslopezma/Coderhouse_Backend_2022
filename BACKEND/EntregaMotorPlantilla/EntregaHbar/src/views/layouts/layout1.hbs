@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PRODUCTOS</title>
+</head>
+
+<body>
+  <h2>Ingrese<br>Producto</h2>
+  <section>
+    <form action="/api/productos" method="POST">
+      <div>
+        <b><label style="color:rgb(39, 3, 241)" for="name"> Nombre:&nbsp&nbsp&nbsp&nbsp </label></b>
+        <input type="text" name="nombre" required />
+      </div>
+      <div>
+        <b><label style="color:rgb(39, 3, 241)" for="precio">Precio:&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</label></b>
+        <b><input type="number" name="precio" required />
+      </div>
+      <div>
+        <label style="color:rgb(39, 3, 241)" for="foto"> URL:&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</label></b>
+        <input type="url" name="foto" required />
+      </div>
+      <br>
+      <br>
+      <br>
+      <div>
+        <input type="submit" value="Enviar" />
+      </div>
+    </form>
+    <br>
+  </section>
+  <section>
+    <form action="/api/productos" method="GET">
+      <div>
+        <input type="submit" value="Ver Productos" />
+      </div>
+    </form>
+  </section>
+</body>
+
+</html>
