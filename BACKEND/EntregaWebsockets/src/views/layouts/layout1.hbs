@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PRODUCTOS</title>
+</head>
+
+<body>
+<h2>Ingrese<br>Producto</h2>
+  <section>
+    <form id= "agregarProd" >
+      <div>
+        <b><label style="color:rgb(39, 3, 241)" for="nombre"> Nombre:&nbsp&nbsp&nbsp&nbsp </label></b>
+        <input type="text" name="nombre" id="nombre" required />
+      </div>
+      <div>
+        <b><label style="color:rgb(39, 3, 241)" for="precio">Precio:&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</label></b>
+        <b><input type="number" name="precio" id="precio" required />
+      </div>
+      <div>
+        <label style="color:rgb(39, 3, 241)" for="foto"> URL:&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</label></b>
+        <input type="url" name="foto" id="foto" required />
+      </div>
+      <div>
+        <input type="submit" value="Enviar" />
+      </div>
+    </form>
+    <br>
+  </section>
+  <section>
+    {{#if productsArray}}
+    <table id= "tablaProds" class="table table-sm table-hover">
+        <caption style="font-size:200%">Lista total de productos</caption>
+        <thead>
+            <tr>
+                <th scope="col">Nombre</th>
+                <th scope="col">Precio</th>
+                <th scope="col">Imagen</th>
+            </tr>
+        </thead>
+        <tbody>
+        </tbody>
+    </table>
+{{else}}
+<h2>No hay productos en la lista</h2>
+{{/if}}
+  </section>
+  <section>
+    <h2>Chat de usuarios</h2>
+    <form id="formulario">
+      Nombre: <input type="text" name="name" id="name">
+      Mensaje: <input type="text" name="info" id="info">
+      <input type="submit" value="INGRESAR">
+    </form>
+    <div>
+      <ul id="lista"></ul>
+    </div>
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="index.js"></script>
+  </section>
+</body>
+
+</html>
