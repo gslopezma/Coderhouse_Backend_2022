@@ -1,0 +1,5 @@
+El objeto index.js es el codigo central que llama las rutas "carrito" y "productos" en la carpeta routes. En esa carpeta tambien esta la clase contenedor.js
+
+El middleware para la autorizacion de usuario se hizo con un header que por postman añadi como un campo "authorization" con valor "true" para cuando tiene acceso, sino retorna error por falta de permisos.
+
+Todas las pruebas se hicieron usando Postman
