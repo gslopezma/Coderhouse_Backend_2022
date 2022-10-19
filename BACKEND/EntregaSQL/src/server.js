@@ -17,16 +17,17 @@ app.use(express.json())
 app.use(express.urlencoded({ extended: true }))
 app.use(express.static('./public'))
 app.engine('hbs', hbs.engine({
-  partialsDir: __dirname + '/src/views/partials',
   layoutsDir: __dirname + '/src/views/layouts',
   extname: '.hbs',
   defaultLayout: 'layout1.hbs'
 }))
 
+/*
 app.set('views', './src/views')
 app.set('view engine', 'hbs')
 app.set('views', './src/views')
 app.set('view engine', 'ejs')
+*/
 
 app.get('/', async (req, res) => {
   try {
