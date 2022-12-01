@@ -1,7 +1,7 @@
-import mongoose from "mongoose";
+import mongoose from "mongoose"
 
 const Schema = new mongoose.Schema({
-    title: {
+    nombre: {
         type: String,
         required: true,
         max: 100
@@ -10,30 +10,14 @@ const Schema = new mongoose.Schema({
         type: Date,
         default: Date.now
     },
-    price: {
+    precio: {
         type: Number,
         required: true
     },
-    description: {
-        type: String,
-        required: true,
-        max: 500
-    },
-    code: {
-        type: String,
-        required: true,
-        max: 6,
-        unique: true
-    },
-    image: {
+    url: {
         type: String,
         max: 200
-    },
-    stock: {
-        type: Number,
-        required: true,
-        max: 5000
     }
 })
 
-export const ProductosModel = mongoose.model("productos", Schema);
+export const ProductosModel = mongoose.model("productos", Schema)
