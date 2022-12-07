@@ -42,6 +42,5 @@ $ sudo service nginx stop
 $ sudo service nginx start
 
 ```
-
 Deberiamos poder acceder desde http://localhost:8080/test/random/
 
